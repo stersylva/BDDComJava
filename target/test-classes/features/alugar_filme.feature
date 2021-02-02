@@ -1,5 +1,6 @@
 # language: pt
 
+@unitários
 Funcionalidade: Alugar Filme
 
 	Como um usuário

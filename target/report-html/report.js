@@ -2,12 +2,22 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "name": "Alugar Filme",
   "description": "\tComo um usuário\n\tEu quero cadastrar aluguéis de filmes\n\tPara controlar preços e datas de entrega",
-  "keyword": "Funcionalidade"
+  "keyword": "Funcionalidade",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.scenario({
   "name": "Deve alugar um filme com sucesso",
   "description": "",
-  "keyword": "Cenário"
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme",
@@ -82,7 +92,12 @@ formatter.result({
 formatter.scenario({
   "name": "Não deve alugar filme sem estoque",
   "description": "",
-  "keyword": "Cenário"
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme com o estoque de 0 unidades",
@@ -212,7 +227,12 @@ formatter.examples({
 formatter.scenario({
   "name": "Deve dar condições conforme o tipo de aluguel",
   "description": "",
-  "keyword": "Esquema do Cenário"
+  "keyword": "Esquema do Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme com o estoque de 2 unidades",
@@ -287,7 +307,12 @@ formatter.result({
 formatter.scenario({
   "name": "Deve dar condições conforme o tipo de aluguel",
   "description": "",
-  "keyword": "Esquema do Cenário"
+  "keyword": "Esquema do Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme com o estoque de 2 unidades",
@@ -362,7 +387,12 @@ formatter.result({
 formatter.scenario({
   "name": "Deve dar condições conforme o tipo de aluguel",
   "description": "",
-  "keyword": "Esquema do Cenário"
+  "keyword": "Esquema do Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme com o estoque de 2 unidades",
@@ -437,7 +467,12 @@ formatter.result({
 formatter.scenario({
   "name": "Deve dar condições conforme o tipo de aluguel",
   "description": "",
-  "keyword": "Esquema do Cenário"
+  "keyword": "Esquema do Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
 });
 formatter.step({
   "name": "um filme com o estoque de 2 unidades",
@@ -505,6 +540,307 @@ formatter.step({
 });
 formatter.match({
   "location": "alugar_filmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/aprender_cucumber.feature");
+formatter.feature({
+  "name": "Aprender Cucumber",
+  "description": "\tComo um aluno\n\tEu quero aprender a utilizar Cucumber\n\tPara que eu possa automatizar crit�rios de aceita��o ",
+  "keyword": "Funcionalidade",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Deve incrementar contador",
+  "description": "",
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o valor do contador é 15",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.queOValorDoContadorÉ(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "eu incrementar com 3",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.euIncrementarCom(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o valor do contador será 18",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.oValorDoContadorSerá(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve incrementar contador",
+  "description": "",
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o valor do contador é 123",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.queOValorDoContadorÉ(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "eu incrementar com 35",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.euIncrementarCom(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o valor do contador será 158",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.oValorDoContadorSerá(Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve Calcular atraso no prazo de entrega",
+  "description": "",
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o prazo é 05/04/2020",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_prazo_é_dia(Integer,Integer,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a entrega atrasar em 2 dias",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.a_entrega_atrasar_em_dias(Integer,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a entrega será efetuada em 07/04/2020",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.a_entrega_será_efetuada_em(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve Calcular atraso no prazo de entrega da China",
+  "description": "",
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o prazo é 05/04/2020",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_prazo_é_dia(Integer,Integer,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a entrega atrasar em 2 meses",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.a_entrega_atrasar_em_dias(Integer,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a entrega será efetuada em 05/06/2020",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.a_entrega_será_efetuada_em(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve criar steps genéricos para estes passos",
+  "description": "",
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o ticket é AF345",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o valor da passagem é R$ 230,45",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_valor_da_passagem_é_r$(Double)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o nome do passageiro é \"Fulano da Silva\"",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_nome_do_passageiro_é(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o telefone do passageiro é 9999-9999",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_telefone_do_passageiro_é(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "criar os steps",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.criar_os_steps()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o teste vai funcionar",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.o_teste_vai_funcionar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve reaproveitar os steps \"Dado\" do cenário anterior",
+  "description": "",
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@unitários"
+    }
+  ]
+});
+formatter.step({
+  "name": "que o ticket é AB167",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o ticket especial é AB167",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o valor da passagem é R$ 1120,23",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_valor_da_passagem_é_r$(Double)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o nome do passageiro é \"Cicrano de Oliveira\"",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_nome_do_passageiro_é(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que o telefone do passageiro é 9888-8888",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "AprenderCucumberSteps.que_o_telefone_do_passageiro_é(String)"
 });
 formatter.result({
   "status": "passed"

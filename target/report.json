@@ -1,0 +1,1304 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-02T23:01:46.209Z",
+        "line": 10,
+        "name": "Deve alugar um filme com sucesso",
+        "description": "",
+        "id": "alugar-filme;deve-alugar-um-filme-com-sucesso",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 8786800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "um filme",
+            "match": {
+              "location": "alugar_filmeSteps.umFilme(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "estoque",
+                  "2"
+                ]
+              },
+              {
+                "cells": [
+                  "preco",
+                  "3"
+                ]
+              },
+              {
+                "cells": [
+                  "tipo",
+                  "comum"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3995100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2442800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "o preço do aluguel será R$ 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 657600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "a data de entrega será em 1 dia",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 513000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "o estoque do filme será 1 unidade",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 24
+                }
+              ],
+              "location": "alugar_filmeSteps.oEstoqueDoFilmeSeráUnidade(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.271Z",
+        "line": 20,
+        "name": "Não deve alugar filme sem estoque",
+        "description": "",
+        "id": "alugar-filme;não-deve-alugar-filme-sem-estoque",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 549200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "um filme com o estoque de 0 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.umFilmeComOEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 480800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 507300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "não será possível por falta de estoque",
+            "match": {
+              "location": "alugar_filmeSteps.nãoSeráPossívelPorFaltaDeEstoque()"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 455400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "o estoque do filme será 0 unidade",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 24
+                }
+              ],
+              "location": "alugar_filmeSteps.oEstoqueDoFilmeSeráUnidade(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.277Z",
+        "line": 36,
+        "name": "Deve dar condições conforme o tipo de aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-o-tipo-de-aluguel;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1050700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "um filme com o estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.umFilmeComOEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 448400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o preço do aluguel seja R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 31
+                }
+              ],
+              "location": "alugar_filmeSteps.queOPreçoDoAluguelSejaR$(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 390200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "que o tipo de aluguel seja extendido",
+            "match": {
+              "arguments": [
+                {
+                  "val": "extendido",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.queOTipoDeAluguelSejaExtendido(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 567700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 463900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "o preço do aluguel será R$ 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 598300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a data de entrega será em 3 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 387400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "a pontuação recebida será de 2 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "alugar_filmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.293Z",
+        "line": 37,
+        "name": "Deve dar condições conforme o tipo de aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-o-tipo-de-aluguel;;3",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 569600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "um filme com o estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.umFilmeComOEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1054600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o preço do aluguel seja R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 31
+                }
+              ],
+              "location": "alugar_filmeSteps.queOPreçoDoAluguelSejaR$(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1319700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "que o tipo de aluguel seja comum",
+            "match": {
+              "arguments": [
+                {
+                  "val": "comum",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.queOTipoDeAluguelSejaExtendido(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 675000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 579100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "o preço do aluguel será R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 731900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a data de entrega será em 1 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 542700,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "a pontuação recebida será de 1 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 29
+                }
+              ],
+              "location": "alugar_filmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.303Z",
+        "line": 38,
+        "name": "Deve dar condições conforme o tipo de aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-o-tipo-de-aluguel;;4",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 511400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "um filme com o estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.umFilmeComOEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 423600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o preço do aluguel seja R$ 10",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 31
+                }
+              ],
+              "location": "alugar_filmeSteps.queOPreçoDoAluguelSejaR$(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 382400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "que o tipo de aluguel seja extendido",
+            "match": {
+              "arguments": [
+                {
+                  "val": "extendido",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.queOTipoDeAluguelSejaExtendido(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 486600,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 448800,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "o preço do aluguel será R$ 20",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 650900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a data de entrega será em 3 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 401100,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "a pontuação recebida será de 2 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "alugar_filmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.310Z",
+        "line": 39,
+        "name": "Deve dar condições conforme o tipo de aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-o-tipo-de-aluguel;;5",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 728100,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "um filme com o estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.umFilmeComOEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 431600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o preço do aluguel seja R$ 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 31
+                }
+              ],
+              "location": "alugar_filmeSteps.queOPreçoDoAluguelSejaR$(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 518700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "que o tipo de aluguel seja semanal",
+            "match": {
+              "arguments": [
+                {
+                  "val": "semanal",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.queOTipoDeAluguelSejaExtendido(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 540700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "alugar",
+            "match": {
+              "location": "alugar_filmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 607200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "o preço do aluguel será R$ 15",
+            "match": {
+              "arguments": [
+                {
+                  "val": "15",
+                  "offset": 27
+                }
+              ],
+              "location": "alugar_filmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 2059300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a data de entrega será em 7 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 26
+                }
+              ],
+              "location": "alugar_filmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 500600,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "a pontuação recebida será de 3 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 29
+                }
+              ],
+              "location": "alugar_filmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      }
+    ],
+    "name": "Alugar Filme",
+    "description": "\tComo um usuário\n\tEu quero cadastrar aluguéis de filmes\n\tPara controlar preços e datas de entrega",
+    "id": "alugar-filme",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/alugar_filme.feature",
+    "tags": [
+      {
+        "name": "@unitários",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-02T23:01:46.319Z",
+        "line": 9,
+        "name": "Deve incrementar contador",
+        "description": "",
+        "id": "aprender-cucumber;deve-incrementar-contador",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 668900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que o valor do contador é 15",
+            "match": {
+              "arguments": [
+                {
+                  "val": "15",
+                  "offset": 26
+                }
+              ],
+              "location": "AprenderCucumberSteps.queOValorDoContadorÉ(Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 478800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu incrementar com 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 19
+                }
+              ],
+              "location": "AprenderCucumberSteps.euIncrementarCom(Integer)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 526600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "o valor do contador será 18",
+            "match": {
+              "arguments": [
+                {
+                  "val": "18",
+                  "offset": 25
+                }
+              ],
+              "location": "AprenderCucumberSteps.oValorDoContadorSerá(Integer)"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.329Z",
+        "line": 14,
+        "name": "Deve incrementar contador",
+        "description": "",
+        "id": "aprender-cucumber;deve-incrementar-contador",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 586300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que o valor do contador é 123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123",
+                  "offset": 26
+                }
+              ],
+              "location": "AprenderCucumberSteps.queOValorDoContadorÉ(Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 994900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "eu incrementar com 35",
+            "match": {
+              "arguments": [
+                {
+                  "val": "35",
+                  "offset": 19
+                }
+              ],
+              "location": "AprenderCucumberSteps.euIncrementarCom(Integer)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 611200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "o valor do contador será 158",
+            "match": {
+              "arguments": [
+                {
+                  "val": "158",
+                  "offset": 25
+                }
+              ],
+              "location": "AprenderCucumberSteps.oValorDoContadorSerá(Integer)"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.335Z",
+        "line": 19,
+        "name": "Deve Calcular atraso no prazo de entrega",
+        "description": "",
+        "id": "aprender-cucumber;deve-calcular-atraso-no-prazo-de-entrega",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 679300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "que o prazo é 05/04/2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "05",
+                  "offset": 14
+                },
+                {
+                  "val": "04",
+                  "offset": 17
+                },
+                {
+                  "val": "2020",
+                  "offset": 20
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_prazo_é_dia(Integer,Integer,Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 429800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a entrega atrasar em 2 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 21
+                },
+                {
+                  "val": "dias",
+                  "offset": 23
+                }
+              ],
+              "location": "AprenderCucumberSteps.a_entrega_atrasar_em_dias(Integer,String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 602700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "a entrega será efetuada em 07/04/2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "07/04/2020",
+                  "offset": 27
+                }
+              ],
+              "location": "AprenderCucumberSteps.a_entrega_será_efetuada_em(String)"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.339Z",
+        "line": 24,
+        "name": "Deve Calcular atraso no prazo de entrega da China",
+        "description": "",
+        "id": "aprender-cucumber;deve-calcular-atraso-no-prazo-de-entrega-da-china",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 403400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "que o prazo é 05/04/2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "05",
+                  "offset": 14
+                },
+                {
+                  "val": "04",
+                  "offset": 17
+                },
+                {
+                  "val": "2020",
+                  "offset": 20
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_prazo_é_dia(Integer,Integer,Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 352800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "a entrega atrasar em 2 meses",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 21
+                },
+                {
+                  "val": "meses",
+                  "offset": 23
+                }
+              ],
+              "location": "AprenderCucumberSteps.a_entrega_atrasar_em_dias(Integer,String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 542500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "a entrega será efetuada em 05/06/2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "05/06/2020",
+                  "offset": 27
+                }
+              ],
+              "location": "AprenderCucumberSteps.a_entrega_será_efetuada_em(String)"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.344Z",
+        "line": 29,
+        "name": "Deve criar steps genéricos para estes passos",
+        "description": "",
+        "id": "aprender-cucumber;deve-criar-steps-genéricos-para-estes-passos",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 550300,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "que o ticket é AF345",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "AF345",
+                  "offset": 15
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 621400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "que o valor da passagem é R$ 230,45",
+            "match": {
+              "arguments": [
+                {
+                  "val": "230,45",
+                  "offset": 29
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_valor_da_passagem_é_r$(Double)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 366100,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "que o nome do passageiro é \"Fulano da Silva\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Fulano da Silva",
+                  "offset": 28
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_nome_do_passageiro_é(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 566600,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "que o telefone do passageiro é 9999-9999",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9999-9999",
+                  "offset": 31
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_telefone_do_passageiro_é(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 813500,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "criar os steps",
+            "match": {
+              "location": "AprenderCucumberSteps.criar_os_steps()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 630300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "o teste vai funcionar",
+            "match": {
+              "location": "AprenderCucumberSteps.o_teste_vai_funcionar()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-02T23:01:46.352Z",
+        "line": 37,
+        "name": "Deve reaproveitar os steps \"Dado\" do cenário anterior",
+        "description": "",
+        "id": "aprender-cucumber;deve-reaproveitar-os-steps-\"dado\"-do-cenário-anterior",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 391300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "que o ticket é AB167",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "AB167",
+                  "offset": 15
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 284000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "que o ticket especial é AB167",
+            "match": {
+              "arguments": [
+                {
+                  "val": " especial",
+                  "offset": 12
+                },
+                {
+                  "val": "AB167",
+                  "offset": 24
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_ticket_é_ab(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 417600,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "que o valor da passagem é R$ 1120,23",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1120,23",
+                  "offset": 29
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_valor_da_passagem_é_r$(Double)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 296900,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "que o nome do passageiro é \"Cicrano de Oliveira\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cicrano de Oliveira",
+                  "offset": 28
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_nome_do_passageiro_é(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 347000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "que o telefone do passageiro é 9888-8888",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9888-8888",
+                  "offset": 31
+                }
+              ],
+              "location": "AprenderCucumberSteps.que_o_telefone_do_passageiro_é(String)"
+            },
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      }
+    ],
+    "name": "Aprender Cucumber",
+    "description": "\tComo um aluno\n\tEu quero aprender a utilizar Cucumber\n\tPara que eu possa automatizar crit�rios de aceita��o ",
+    "id": "aprender-cucumber",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/aprender_cucumber.feature",
+    "tags": [
+      {
+        "name": "@unitários",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
