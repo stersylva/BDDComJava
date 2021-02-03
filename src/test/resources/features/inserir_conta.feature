@@ -1,4 +1,6 @@
 #language: pt
+
+@funcionais
 Funcionalidade: Cadastro de contas
 
 	Como um usuário 

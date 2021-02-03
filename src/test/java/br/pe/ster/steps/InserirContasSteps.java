@@ -110,7 +110,7 @@ public class InserirContasSteps {
 //		}
 //	}
 	
-	@After(order = 0, value = "not @unitários")
+	@After(order = 0, value = "@funcionais")
 	public void fecharBrower() {
 		driver.quit();
 	}
