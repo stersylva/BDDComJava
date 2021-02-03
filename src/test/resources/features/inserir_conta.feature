@@ -8,17 +8,10 @@ Funcionalidade: Cadastro de contas
 	Para que eu possa distribuir meu dinheiro de uma forma mais organizada
 
 Contexto:
-	Dado que estou acessando a aplicação
-	Quando informo o usuário "stersylva@gmail.com"
-	E a senha "1234"
-	E seleciono entrar
-	Então visualizo a página inicial
-	Quando seleciono Contas
-	E seleciono Adicionar
+	Dado que desejo adicionar uma conta
 
 Esquema do Cenário: Deve validar regras do cadastro de contas
-	Quando informo a conta "<conta>"
-	E seleciono Salvar
+	Quando adciono a conta "<conta>"
 	Então eu recebo a mensagem "<mensagem>"
 
 Exemplos: 
